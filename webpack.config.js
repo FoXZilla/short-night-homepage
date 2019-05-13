@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         index: './src/index.js',
-        examples: './src/examples.js',
+        'examples/polar-day': './src/examples/polar-day',
     },
     output: {
         path: Path.join(__dirname, 'dist'),
@@ -49,6 +49,7 @@ module.exports = {
                 options: {
                     limit: 10000,
                     name: 'img/[name].[hash:7].[ext]',
+                    publicPath: '/',
                 }
             },
         ]
@@ -59,8 +60,8 @@ module.exports = {
             chunks: ['index'],
         }),
         new HtmlWebpackPlugin({
-            filename:'examples.html',
-            chunks: ['examples'],
+            filename:'examples/polar-day.html',
+            chunks: ['examples/polar-day'],
         }),
     ],
 };

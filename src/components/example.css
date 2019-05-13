@@ -1,0 +1,9 @@
+.timelineArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+.shortNightApp {
+    border: 1px solid #000;
+}
