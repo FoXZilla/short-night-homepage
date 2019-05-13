@@ -5,6 +5,7 @@ module.exports = {
     entry: {
         index: './src/index.js',
         'examples/polar-day': './src/examples/polar-day',
+        'examples/rules': './src/examples/rules',
     },
     output: {
         path: Path.join(__dirname, 'dist'),
@@ -62,6 +63,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename:'examples/polar-day.html',
             chunks: ['examples/polar-day'],
+        }),
+        new HtmlWebpackPlugin({
+            filename:'examples/rules.html',
+            chunks: ['examples/rules'],
         }),
     ],
 };
