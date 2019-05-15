@@ -19,5 +19,4 @@ ReactDOM.render(<Layout>
             Timeline={Timeline}
         />
     </Layout.Content>
-    <Layout.Footer>Footer</Layout.Footer>
 </Layout>, createElementInBody());

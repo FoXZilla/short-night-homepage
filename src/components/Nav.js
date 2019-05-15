@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Menu, Icon } from 'antd';
 import logoImg from '@/assets/foxzilla.png';
-const style = require('./nav.css');
+const style = require('./Nav.css');
 
 
 export default function () {

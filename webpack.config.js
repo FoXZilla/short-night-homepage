@@ -57,16 +57,22 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            title: 'Foxzilla Short-night',
             filename:'index.html',
             chunks: ['index'],
+            favicon: './src/assets/favicon.ico',
         }),
         new HtmlWebpackPlugin({
+            title: 'Short-night example: polar-day',
             filename:'examples/polar-day.html',
             chunks: ['examples/polar-day'],
+            favicon: './src/assets/favicon.ico',
         }),
         new HtmlWebpackPlugin({
+            title: 'Short-night example: Rules',
             filename:'examples/rules.html',
             chunks: ['examples/rules'],
+            favicon: './src/assets/favicon.ico',
         }),
     ],
 };

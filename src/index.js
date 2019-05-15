@@ -2,21 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Layout, Menu } from 'antd';
 import Nav from './components/Nav';
-
-const {
-    Header, Footer, Sider, Content,
-} = Layout;
-
+import Footer from './components/Footer';
 
 const root = document.createElement('div');
 document.body.appendChild(root);
 
 ReactDOM.render(<Layout>
-        <Header>
+        <Layout.Header>
             <Nav />
-        </Header>
-        <Content>Content</Content>
-        <Footer>Footer</Footer>
+        </Layout.Header>
+        <Layout.Footer><Footer /></Layout.Footer>
     </Layout>,
     root
 );

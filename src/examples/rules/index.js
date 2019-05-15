@@ -2,6 +2,7 @@ import ReactDOM from "react-dom";
 import React from "react";
 import {PageHeader, Layout, Row} from "antd";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import Description from "@/components/Description";
 import Example from "@/components/Example";
 import {createElementInBody} from '@/commons/functions';
@@ -30,5 +31,5 @@ ReactDOM.render(<Layout>
             Timeline={Rules.Timeline}
         />
     </Layout.Content>
-    <Layout.Footer>Footer</Layout.Footer>
+    <Layout.Footer><Footer /></Layout.Footer>
 </Layout>, createElementInBody());

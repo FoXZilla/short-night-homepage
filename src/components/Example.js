@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Alert } from 'antd';
 import Editor from '@/components/Editor';
-import style from './example.css';
+import style from './Example.css';
 import debounce from 'lodash/debounce';
 
 
