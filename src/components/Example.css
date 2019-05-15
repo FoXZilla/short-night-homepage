@@ -1,0 +1,21 @@
+.timelineArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-top: 1px solid #000000;
+}
+.shortNightApp {
+    border: 1px solid #000;
+}
+
+.alertContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+}
+.alert {
+    width: 100%;
+}
