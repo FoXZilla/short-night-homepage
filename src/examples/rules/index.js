@@ -9,7 +9,7 @@ import {createElementInBody} from '@/commons/functions';
 import packageJson from '@foxzilla/rules/package.json';
 
 import defaultValue from "./default-value";
-import '@foxzilla/rules';
+import '@foxzilla/rules/dist/rules.js';
 
 ReactDOM.render(<Layout>
     <Layout.Header>
@@ -28,7 +28,7 @@ ReactDOM.render(<Layout>
         <Example
             name='rules'
             defaultValue={defaultValue}
-            Timeline={Rules.Timeline}
+            draw={Rules.draw}
         />
     </Layout.Content>
     <Layout.Footer><Footer /></Layout.Footer>

@@ -5,8 +5,8 @@ import Nav from "@/components/Nav";
 import Example from "@/components/Example";
 import {createElementInBody} from '@/commons/functions';
 
+import Timeline from "@foxzilla/polar-day";
 import defaultValue from "./default-value";
-import Timeline from '@foxzilla/polar-day';
 
 ReactDOM.render(<Layout>
     <Layout.Header>

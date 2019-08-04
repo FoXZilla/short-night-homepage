@@ -3,32 +3,48 @@ import { Row, Col, Alert } from 'antd';
 import Editor from '@/components/Editor';
 import style from './Example.css';
 import debounce from 'lodash/debounce';
-
+import PropTypes from 'prop-types';
 
 export default class extends React.Component {
+    static propTypes = {
+        name: PropTypes.string,
+        draw: PropTypes.func,
+        Timeline: PropTypes.func,
+        defaultValue: PropTypes.any,
+    };
+
     state = {
         timeline: null,
+        draw: null,
         error: null,
     };
 
     componentDidMount() {
-        const timeline = new this.props.Timeline(this.props.Timeline.mount('#short-night-app', this.props.name));
-        this.setState({
-            timeline
-        });
+        if (this.props.Timeline) {
+            const timeline = new this.props.Timeline(this.props.Timeline.mount('#short-night-app', this.props.name));
+            this.setState({
+                timeline
+            });
 
-        timeline.drawInfo.events = this.props.defaultValue;
-        timeline.apply().then(() => {
-            timeline.draw();
-        });
+            timeline.drawInfo.events = this.props.defaultValue;
+            timeline.apply().then(() => {
+                timeline.draw();
+            });
+        } else {
+            this.props.draw('#short-night-app', this.props.defaultValue);
+        }
     }
 
     async onEditorChange(jsonCode) {
         try {
-            this.state.timeline.hide();
-            this.state.timeline.drawInfo.events = JSON.parse(jsonCode);
-            await this.state.timeline.apply();
-            this.state.timeline.draw();
+            if (this.state.timeline) {
+                this.state.timeline.hide();
+                this.state.timeline.drawInfo.events = JSON.parse(jsonCode);
+                await this.state.timeline.apply();
+                this.state.timeline.draw();
+            } else {
+                this.props.draw('#short-night-app', JSON.parse(jsonCode));
+            }
 
             this.setState({ error: null });
         } catch (error) {

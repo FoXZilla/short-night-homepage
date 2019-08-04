@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/FoXZilla/short-night-homepage#readme",
   "dependencies": {
-    "@foxzilla/polar-day": "0.0.2",
+    "@foxzilla/polar-day": "0.0.6",
+    "@foxzilla/rules": "^0.0.1",
     "antd": "^3.17.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-import": "^1.11.0",
@@ -32,6 +33,7 @@
     "html-webpack-plugin": "^4.0.0-beta.5",
     "lodash": "^4.17.11",
     "prismjs": "^1.16.0",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-simple-code-editor": "^0.9.10",
