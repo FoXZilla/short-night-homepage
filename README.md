@@ -1,3 +1,6 @@
+see https://github.com/FoXZilla/short-night-homepage-2
+
+<!--
 # short-night-homepage
 The homepage for short-night
 
@@ -10,4 +13,4 @@ yarn run dev
 
 For build:
 yarn run build
-
+-->
